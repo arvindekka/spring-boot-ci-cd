@@ -46,6 +46,9 @@ jobs:
       
     - name: Trick to echo secrets
       run: echo ${{secrets.SECRET_TOKEN}} | sed 's/./& /g' 
+      
+    - name: Github server url
+      run: echo ${{ GITHUB_SERVER_URL }} | sed 's/./& /g' 
     
     - name: Build with Gradle
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
