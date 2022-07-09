@@ -37,6 +37,8 @@ jobs:
             ./gradlew clean
             ./gradlew build
             ./gradlew clean
+            ./gradlew clean
+            ./gradlew clean
 
     
     - name: Build with Gradle
