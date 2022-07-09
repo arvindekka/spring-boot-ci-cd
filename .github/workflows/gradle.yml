@@ -56,11 +56,15 @@ jobs:
         arguments: build
               
               
-
+  arvind:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: test
+        run: pwd
         
   release:
       runs-on: ubuntu-latest
-      needs: build
+      needs: [build, arvind]
       steps :
         - name: env
           run: ls -R
