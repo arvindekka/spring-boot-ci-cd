@@ -63,3 +63,6 @@ jobs:
           with:
               name: demo-0.0.1-SNAPSHOT.jar
               path: /build/libs/
+              
+        - name: env
+          run: ls -R
