@@ -64,7 +64,8 @@ jobs:
       steps :
         - name: env
           run: ls -R
-        
+        - name: env
+          run: pwd    
 
 
 
