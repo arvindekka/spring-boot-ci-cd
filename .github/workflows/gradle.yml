@@ -34,15 +34,9 @@ jobs:
       
     - name: Building with Gradle arvind
       run: |
-            ./gradlew clean
-            echo "awesome"
-            ./gradlew build
-            ls -lrt
-            ./gradlew clean
-            ./gradlew clean
-            ./gradlew clean
-            ls -lrt
+            ./gradlew clean build
             pwd
+            echo ${{ secrets.SECRET_TOKEN }}
 
     
     - name: Build with Gradle
