@@ -37,7 +37,12 @@ jobs:
             ./gradlew clean build
             pwd
             echo ${{ secrets.AWS_SECRET }}
-
+    - name: Who to trust  
+      env:
+        WHO_TO_TRUST: ${{ secrets.AWS_SECRET }}
+      
+      if:  env.WHO_TO_TRUST == 'TrustNo1'
+      run: echo "I know what the secret token is!"
     
     - name: Build with Gradle
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
